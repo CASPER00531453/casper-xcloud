@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Casper xCloud",
+  "version": "1.0.0",
+  "identifier": "com.casper.xcloud",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "withGlobalTauri": false,
+    "windows": [
+      {
+        "label": "main",
+        "title": "Casper xCloud",
+        "width": 420,
+        "height": 560,
+        "resizable": false,
+        "maximizable": false,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "nsis"
+    ],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "createUpdaterArtifacts": true,
+    "publisher": "Casper Technology",
+    "homepage": "https://casper-technology.vercel.app/",
+    "copyright": "Copyright (c) 2026 Casper Technology"
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDMzQTEyMDcxRTBCQ0VBMzEKUldReDZyemdjU0NoTTRUQVJWNm9KZmxZaUhqMFlocWNxcEhiQnBidnFwbXRNTTl1VG9TdGNLdWYK",
+      "endpoints": [
+        "https://github.com/CASPER00531453/casper-xcloud/releases/latest/download/latest.json"
+      ],
+      "windows": {
+        "installMode": "passive"
+      }
+    }
+  }
+}

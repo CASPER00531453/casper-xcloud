@@ -1,0 +1,285 @@
+:root {
+  --bg: #0d1117;
+  --panel: #161b22;
+  --line: #30363d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #107c10;
+  --accent-dim: #0b5a0b;
+  --danger: #da3633;
+  --blue: #3b82f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.5 system-ui, "Segoe UI", sans-serif;
+  user-select: none;
+  overflow: hidden;
+}
+
+#app {
+  height: 100vh;
+}
+
+.screen {
+  height: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Kod ekranı */
+.code {
+  justify-content: center;
+  gap: 14px;
+}
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.sub {
+  color: var(--muted);
+  margin: 0;
+  text-align: center;
+}
+.notice {
+  color: #f0b429;
+  background: #3a2f0b;
+  padding: 8px 14px;
+  border-radius: 8px;
+  margin: 0;
+}
+.code-input {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 3px;
+  font-family: ui-monospace, monospace;
+  padding: 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--text);
+}
+.code-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.err {
+  color: var(--danger);
+  min-height: 20px;
+  margin: 0;
+}
+
+/* Ana ekran */
+.home {
+  justify-content: center;
+  gap: 18px;
+  position: relative;
+}
+.gear {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: 0;
+  color: var(--muted);
+  font-size: 22px;
+  cursor: pointer;
+}
+.gear:hover {
+  color: var(--text);
+}
+.power {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid var(--line);
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 58px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.power:hover {
+  transform: scale(1.03);
+}
+.power.on {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 40px -8px var(--accent);
+}
+.power.connecting {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+.power.fail {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+.power:disabled {
+  cursor: default;
+}
+.status {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+.status.on {
+  color: var(--accent);
+}
+.status.fail {
+  color: var(--danger);
+}
+.strategy {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Ayarlar */
+.settings {
+  align-items: stretch;
+  gap: 14px;
+  overflow-y: auto;
+}
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bar h2 {
+  margin: 0;
+  font-size: 18px;
+}
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--muted);
+}
+select {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px;
+  font: inherit;
+}
+.spacer {
+  flex: 1;
+}
+.muted {
+  color: var(--muted);
+  margin: 4px 0;
+}
+.center {
+  text-align: center;
+}
+
+/* Butonlar */
+button {
+  font: inherit;
+}
+.primary,
+.secondary,
+.danger {
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+}
+.primary {
+  background: var(--accent);
+}
+.primary:hover {
+  background: var(--accent-dim);
+}
+.secondary {
+  background: var(--line);
+}
+.danger {
+  background: var(--danger);
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.link {
+  background: none;
+  border: 0;
+  color: var(--blue);
+  cursor: pointer;
+  text-align: left;
+  padding: 4px 0;
+}
+
+.home .logo {
+  margin-bottom: 6px;
+}
+.home .spacer {
+  flex: 0 0 8px;
+}
+
+.home .secondary,
+.home .primary {
+  margin-top: -8px;
+}
+.settings h3 {
+  margin: 8px 0 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--muted);
+}
+.back {
+  position: static;
+}
+.check small {
+  font-size: 12px;
+}
+
+/* Ana ekranda en üstteki hızlı aç butonu */
+.home .quick {
+  margin-top: 0;
+}
+.home .msg {
+  margin: -10px 0 -6px;
+  min-height: 0;
+}
+.home .power {
+  width: 130px;
+  height: 130px;
+  font-size: 48px;
+}
+.home {
+  gap: 14px;
+}
+
+.link.inline {
+  display: inline;
+  padding: 0;
+  font-size: inherit;
+  text-align: inherit;
+}

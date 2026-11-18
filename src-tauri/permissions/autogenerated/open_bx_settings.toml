@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-open-bx-settings"
+description = "Enables the open_bx_settings command without any pre-configured scope."
+commands.allow = ["open_bx_settings"]
+
+[[permission]]
+identifier = "deny-open-bx-settings"
+description = "Denies the open_bx_settings command without any pre-configured scope."
+commands.deny = ["open_bx_settings"]

@@ -1,0 +1,16 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "xcloud-panel",
+  "description": "xCloud penceresindeki Casper paneli: yalnızca ayar komutları ve hızlı aç. Pencere açma/kapatma ve Tauri çekirdek API'leri bu siteye verilmez.",
+  "windows": ["play-*"],
+  "remote": {
+    "urls": ["https://www.xbox.com/*", "https://play.xbox.com/*"]
+  },
+  "permissions": [
+    "allow-get-state",
+    "allow-set-enabled",
+    "allow-set-settings",
+    "allow-apply-recommended",
+    "allow-open-support"
+  ]
+}

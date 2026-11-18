@@ -23,7 +23,7 @@ Gereksinim: Windows 10/11 (WebView2, Windows 11'de hazır gelir).
 
 ## "Virüs var" uyarısı hakkında
 
-Casper xCloud **açık kaynaktır**: tüm kod bu repoda, ne yaptığını herkes okuyabilir ve kendisi derleyebilir.
+Casper xCloud'un **kaynak kodu bu repoda görülebilir**: ne yaptığını herkes okuyabilir ve kendisi derleyip doğrulayabilir.
 
 Windows SmartScreen'in "Windows bilgisayarınızı korudu" uyarısı veya bazı antivirüslerin şüphe bildirmesi şu sebeplerden olur:
 
@@ -77,7 +77,7 @@ Sorun, öneri ve iletişim için: **[Casper Technology](https://casper-technolog
 
 ## Lisans ve teşekkür
 
-Casper xCloud'un kodu **MIT lisansı** ile açıktır: [LICENSE](LICENSE).
+**© 2026 Casper Technology. Tüm hakları saklıdır.** Kaynak kod yalnızca incelenmek için açıktır; izinsiz kopyalanamaz, değiştirilemez, dağıtılamaz veya başka bir üründe kullanılamaz. Ayrıntılar: [LICENSE](LICENSE).
 
 Casper xCloud, açık kaynaklı **[Better xCloud](https://github.com/redphx/better-xcloud)** (redphx, MIT lisansı) üzerine kuruludur. Lisans metni ve diğer bileşenler için bkz. [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
